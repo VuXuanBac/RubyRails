@@ -6,3 +6,9 @@ author_link: "https://www.michaelhartl.com/"
 languages:
   vi: "Tiếng Việt"
   en: "English"
+
+email_regex: !ruby/regexp /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
+validation:
+  name_len_max: 50
+  email_len_max: 255
+  password_len_min: 6
