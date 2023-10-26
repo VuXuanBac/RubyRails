@@ -1,0 +1,9 @@
+<% provide(:title, t(".title")) %>
+<h1><%= t ".title" %></h1>
+<p>
+  <%= t ".info_html", \
+        rails_link: Settings.rails_tutorial_link, \
+        ruby_rails_link: Settings.ruby_rails_link, \
+        screencast_link: Settings.screencast_link \
+  %>
+</p>
