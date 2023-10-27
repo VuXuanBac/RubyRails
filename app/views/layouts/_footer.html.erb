@@ -1,0 +1,15 @@
+<footer class="footer">
+  <small>
+    <%= t ".info_html",
+        rails_link: Settings.rails_tutorial_link,
+        author_link: Settings.author_link
+    %>
+  </small>
+  <nav>
+    <ul>
+      <li><%= link_to t(".about_text"), about_path %></li>
+      <li><%= link_to t(".contact_text"), contact_path %></li>
+      <li><a href="<%= Settings.news_link %>"><%= t(".news_text") %></a></li>
+    </ul>
+  </nav>
+</footer>

@@ -30,4 +30,45 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  app_name: "sample app"
+  base_title: "Ruby on Rails Tutorial Sample App"
+  static_pages:
+    home:
+      title: ""
+      welcome: "Welcome to the Sample App"
+      intro_html: "This is the home page for the sample application in <a href='%{link}'>Ruby on Rails Tutorial</a>"
+      signup_text: "Sign up now!"
+    about:
+      title: "About"
+      info_html: "The <a href='%{rails_link}'><em>Ruby on Rails \
+                  Tutorial</em></a>, part of the \
+                  <a href='https://www.learnenough.com/'>Learn Enough</a> family of \
+                  tutorials, is a \
+                  <a href='%{rails_link}book'>book</a> and \
+                  <a href='%{screencast_link}'>screencast series</a> \
+                  to teach web development with \
+                  <a href='%{ruby_rails_link}'>Ruby on Rails</a>. \
+                  This is the sample app for the tutorial."
+    contact:
+      title: "Contact"
+      info_html: "Contact the Ruby on Rails Tutorial about the sample app at the \
+                  <a href='%{link}contact'>contact page</a>"
+    help:
+      title: "Help"
+      info_html: "Get help on the Ruby on Rails Tutorial at the \
+                  <a href='%{link}help'>Rails Tutorial Help page</a>. \
+                  To get help on this sample app, see the
+                  <a href='%{link}book'> \
+                      <em>Ruby on Rails Tutorial</em> \
+                  </a>."
+  layouts:
+    header:
+      home_text: "Home"
+      help_text: "Help"
+      signin_text: "Sign in"
+    footer:
+      about_text: "About"
+      contact_text: "Contact"
+      news_text: "News"
+      info_html: "The <a href='%{rails_link}'>Ruby on Rails Tutorial</a>
+                  by <a href='%{author_link}'>Michael Hartl</a>"
