@@ -1,44 +1,15 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t "hello"
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t("hello") %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   "true": "foo"
-#
-# To learn more, please read the Rails Internationalization guide
-# available at https://guides.rubyonrails.org/i18n.html.
-
 en:
   app_name: "sample app"
   base_title: "Ruby on Rails Tutorial Sample App"
   utils:
-    errors_count: "This form contains %{pluralize(@user.errors.count, 'error')}"
+    errors_count: "This form contains %{count}"
+    error: "error"
   text:
     user_welcome: "Welcome to the Sample App!"
-    login_fail: "Invalid email/password combination"
     login: "Log in"
     signup: "Sign up"
+    require_login: "Please log in"
+    login_fail: "Invalid email/password combination"
   static_pages:
     home:
       title: ""
@@ -70,13 +41,28 @@ en:
         <em>Ruby on Rails Tutorial</em> \
         </a>."
   users:
+    text:
+      update_success: "Update account successfully!"
+      delete_success: "Delete account successfully!"
+      delete_fail: "Fail to delete the account!"
     new:
       title: "Sign up"
-      submit_text: "Create my account"
+    edit:
+      title: "Update profile"
+      avatar_change_text: "Change avatar"
+    index:
+      title: "People"
+    form:
       name_text: "Username"
       pwd_text: "Password"
       pwd_confirm_text: "Password Confirmation"
       email_text: "Email"
+      submit_text:
+        new: "Create my account"
+        edit: "Update my account"
+    user:
+      delete_text: "Delete"
+      delete_confirm_text: "Are you sure to delete this account?"
   sessions:
     new:
       signup_text: "Sign up now!"

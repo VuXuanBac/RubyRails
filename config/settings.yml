@@ -5,7 +5,9 @@ news_link: "https://news.railstutorial.org/"
 author_link: "https://www.michaelhartl.com/"
 gravatar_link: "https://secure.gravatar.com/"
 gravatar_template: "https://secure.gravatar.com/avatar/%{id}?s=%{size}"
-avatar_size: 80
+gravatar_change_link: "https://gravatar.com/emails"
+gravatar_size: 80
+avatar_size: 50
 
 languages:
   vi: "Tiếng Việt"

@@ -55,6 +55,7 @@ gem "pry"
 
 gem "jquery-rails"
 
+gem "pagy"
 # Use Sass to process CSS
 # gem "sassc-rails"
 
@@ -67,6 +68,8 @@ group :development, :test do
   gem "rubocop", "~> 1.26", require: false
   gem "rubocop-checkstyle_formatter", require: false
   gem "rubocop-rails", "~> 2.14.0", require: false
+
+  gem "faker"
 end
 
 group :development do

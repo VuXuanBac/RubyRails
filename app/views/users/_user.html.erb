@@ -1,0 +1,8 @@
+<li>
+  <%= gravatar_for user, size: Settings.avatar_size %>
+  <%= link_to user.name, user %>
+  <% if is_admin? user %>
+    | <%= link_to t(".delete_text"), user,
+        data: { "turbo-method": :delete, turbo_confirm: t(".delete_confirm_text") } %>
+  <% end %>
+</li>
