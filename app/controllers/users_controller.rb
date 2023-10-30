@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-
   before_action :find_user, only: %i(show edit update destroy)
   before_action :logged_in_user, only: %i(index edit update destroy)
   before_action :correct_user, only: %i(edit update)
@@ -9,13 +8,15 @@ class UsersController < ApplicationController
     @pagy, @users = pagy User.on_activated.sort_list
   end
 
-  def show;end
+  def show
+    @pagy, @microposts = pagy @user.microposts.newest.with_attached_image
+  end
 
   def new
     @user = User.new
   end
 
-  def edit;end
+  def edit; end
 
   def create
     @user = User.new user_params
@@ -48,35 +49,27 @@ class UsersController < ApplicationController
 
   private
 
-    def user_params
-      params.require(:user).permit(:name, :email, :password,
-                                   :password_confirmation)
-    end
+  def user_params
+    params.require(:user).permit(:name, :email, :password,
+                                 :password_confirmation)
+  end
 
-    def find_user
-      @user = User.find_by id: params[:id]
-      return if @user
+  def find_user
+    @user = User.find_by id: params[:id]
+    return if @user
 
-      redirect_to root_path
-    end
+    redirect_to root_path
+  end
 
-    ########  BEFORE FILTERS  #######
-    # Confirms a logged-in user.
-    def logged_in_user
-      unless logged_in?
-        store_location
-        flash[:danger] = t "text.require_login"
-        redirect_to login_url
-      end
-    end
+  ########  BEFORE FILTERS  #######
 
-    # Confirms the correct user.
-    def correct_user
-      redirect_to root_url unless current_user? @user
-    end
+  # Confirms the correct user.
+  def correct_user
+    redirect_to root_url unless current_user? @user
+  end
 
-    # Confirms an admin user.
-    def admin_user
-      redirect_to(root_url) unless current_user.admin?
-    end
+  # Confirms an admin user.
+  def admin_user
+    redirect_to(root_url) unless current_user.admin?
+  end
 end

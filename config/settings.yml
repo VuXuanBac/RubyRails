@@ -8,6 +8,11 @@ gravatar_template: "https://secure.gravatar.com/avatar/%{id}?s=%{size}"
 gravatar_change_link: "https://gravatar.com/emails"
 gravatar_size: 80
 avatar_size: 50
+logo_size: 200
+display_image_size_max: [500, 500]
+
+email_from_default: "noreply@example.com"
+development_host: "localhost:3000"
 
 email_from_default: "noreply@example.com"
 development_host: "localhost:3000"
@@ -22,3 +27,6 @@ validation:
   email_len_max: 255
   password_len_min: 6
   pwd_expires_long: 2
+  content_len_max: 140
+  image_type: <%= %w[image/jpeg image/gif image/png] %>
+  image_size_max: 5
