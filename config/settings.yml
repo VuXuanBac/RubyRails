@@ -21,3 +21,4 @@ validation:
   name_len_max: 50
   email_len_max: 255
   password_len_min: 6
+  pwd_expires_long: 2

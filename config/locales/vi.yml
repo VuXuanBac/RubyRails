@@ -4,6 +4,8 @@ vi:
   utils:
     errors_count: "Có %{count}"
     error: "lỗi"
+  errors:
+    old_pwd: "không được trùng với mật khẩu cũ"
   text:
     user_welcome: "Chào mừng bạn đến với ứng dụng!"
     login: "Đăng nhập"
@@ -71,6 +73,7 @@ vi:
       email: "Email"
       password: "Mật khẩu"
       rememberme_text: "Lưu phiên đăng nhập của tôi"
+      forgot_pwd_text: "(Quên mật khẩu)"
     create:
       not_activate_notify: "Tài khoản của bạn chưa kích hoạt. Cách thức kích hoạt tài khoản đã được gửi về email bạn dùng để đăng ký"
   account_activations:
@@ -78,6 +81,22 @@ vi:
       activate_success: "Kích hoạt tài khoản thành công!"
       activate_fail: "Đường dẫn kích hoạt không hợp lệ!"
       user_not_found: "Tài khoản không tồn tại"
+  password_resets:
+    text:
+      invalid_email: "Địa chỉ email không tồn tại"
+      mail_sent: "Hướng dẫn lấy lại mật khẩu đã được gửi vào email của bạn"
+      token_expire: "Liên kết lấy lại mật khẩu đã quá hạn!"
+      empty_pwd: "không thể trống"
+      reset_success: "Thiết lập lại mật khẩu thành công"
+    new:
+      title: "Quên mật khẩu"
+      email_text: "Email"
+      submit_text: "Xác nhận"
+    edit:
+      title: "Lấy lại mật khẩu"
+      pwd_text: "Mật khẩu"
+      pwd_confirm_text: "Xác nhận"
+      submit_text: "Cập nhật"
   layouts:
     header:
       home_text: "Trang chủ"
@@ -100,3 +119,9 @@ vi:
       subject: "Xác thực email cho tài khoản"
       content: "Chào mừng đến với Ứng dụng của tôi! Email này đã dùng để đăng ký tài khoản trên ứng dụng. Hãy nhấn vào liên kết dưới đây để xác thực đó là bạn:"
       link_text: "Kích hoạt tài khoản này cho tôi."
+    password_reset:
+      subject: "Lấy lại mật khẩu"
+      content: "Hãy nhấn vào liên kết dưới đây để thiết lập lại mật khẩu:"
+      link_text: "Thiết lập lại mật khẩu"
+      notify_expire: "Liên kết chỉ có hiệu lực trong 2 tiếng."
+      end_content: "Nếu bạn không phải là người gửi yêu cầu này, hãy bỏ qua email, mật khẩu của bạn sẽ không thay đổi."
