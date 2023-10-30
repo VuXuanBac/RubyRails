@@ -32,6 +32,10 @@
 en:
   app_name: "sample app"
   base_title: "Ruby on Rails Tutorial Sample App"
+  utils:
+    errors_count: "This form contains %{pluralize(@user.errors.count, 'error')}"
+  text:
+    user_welcome: "Welcome to the Sample App!"
   static_pages:
     home:
       title: ""
@@ -41,26 +45,35 @@ en:
     about:
       title: "About"
       info_html: "The <a href='%{rails_link}'><em>Ruby on Rails \
-                  Tutorial</em></a>, part of the \
-                  <a href='https://www.learnenough.com/'>Learn Enough</a> family of \
-                  tutorials, is a \
-                  <a href='%{rails_link}book'>book</a> and \
-                  <a href='%{screencast_link}'>screencast series</a> \
-                  to teach web development with \
-                  <a href='%{ruby_rails_link}'>Ruby on Rails</a>. \
-                  This is the sample app for the tutorial."
+        Tutorial</em></a>, part of the \
+        <a href='https://www.learnenough.com/'>Learn Enough</a> family of \
+        tutorials, is a \
+        <a href='%{rails_link}book'>book</a> and \
+        <a href='%{screencast_link}'>screencast series</a> \
+        to teach web development with \
+        <a href='%{ruby_rails_link}'>Ruby on Rails</a>. \
+        This is the sample app for the tutorial."
     contact:
       title: "Contact"
-      info_html: "Contact the Ruby on Rails Tutorial about the sample app at the \
-                  <a href='%{link}contact'>contact page</a>"
+      info_html:
+        "Contact the Ruby on Rails Tutorial about the sample app at the \
+        <a href='%{link}contact'>contact page</a>"
     help:
       title: "Help"
       info_html: "Get help on the Ruby on Rails Tutorial at the \
-                  <a href='%{link}help'>Rails Tutorial Help page</a>. \
-                  To get help on this sample app, see the
-                  <a href='%{link}book'> \
-                      <em>Ruby on Rails Tutorial</em> \
-                  </a>."
+        <a href='%{link}help'>Rails Tutorial Help page</a>. \
+        To get help on this sample app, see the
+        <a href='%{link}book'> \
+        <em>Ruby on Rails Tutorial</em> \
+        </a>."
+  users:
+    new:
+      title: "Sign up"
+      submit_text: "Create my account"
+      name_text: "Username"
+      pwd_text: "Password"
+      pwd_confirm_text: "Password Confirmation"
+      email_text: "Email"
   layouts:
     header:
       home_text: "Home"
@@ -71,4 +84,4 @@ en:
       contact_text: "Contact"
       news_text: "News"
       info_html: "The <a href='%{rails_link}'>Ruby on Rails Tutorial</a>
-                  by <a href='%{author_link}'>Michael Hartl</a>"
+        by <a href='%{author_link}'>Michael Hartl</a>"

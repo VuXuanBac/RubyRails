@@ -1,6 +1,10 @@
 vi:
   app_name: "Ứng dụng của tôi"
   base_title: "Thực hành Ruby on Rails"
+  utils:
+    errors_count: "Có %{count} lỗi"
+  text:
+    user_welcome: "Chào mừng bạn đến với ứng dụng!"
   static_pages:
     home:
       title: ""
@@ -10,25 +14,34 @@ vi:
     about:
       title: "Về chúng tôi"
       info_html: "Khóa học <a href='%{rails_link}'><em>Ruby on Rails \
-                  </em></a>, là một phần của bộ khóa học \
-                  <a href='https://www.learnenough.com/'>Learn Enough</a>, bao gồm \
-                  <a href='%{rails_link}book'>cuốn sách</a> và \
-                  <a href='%{screencast_link}'>bộ ảnh chụp màn hình</a> \
-                  hỗ trợ phát triển ứng dụng web với \
-                  <a href='%{ruby_rails_link}'>Ruby on Rails</a>. \
-                  Đây là ứng dụng ví dụ trong khóa học."
+        </em></a>, là một phần của bộ khóa học \
+        <a href='https://www.learnenough.com/'>Learn Enough</a>, bao gồm \
+        <a href='%{rails_link}book'>cuốn sách</a> và \
+        <a href='%{screencast_link}'>bộ ảnh chụp màn hình</a> \
+        hỗ trợ phát triển ứng dụng web với \
+        <a href='%{ruby_rails_link}'>Ruby on Rails</a>. \
+        Đây là ứng dụng ví dụ trong khóa học."
     contact:
       title: "Liên hệ"
-      info_html: "Liên hệ với chúng tôi những vấn đề về ứng dụng trong khóa học thông qua \
-                  <a href='%{link}contact'>trang liên hệ</a>"
+      info_html:
+        "Liên hệ với chúng tôi những vấn đề về ứng dụng trong khóa học thông qua \
+        <a href='%{link}contact'>trang liên hệ</a>"
     help:
       title: "Trợ giúp"
       info_html: "Tìm kiếm sự hỗ trợ về khóa học Ruby on Rails tại \
-                  <a href='%{link}help'>trang trợ giúp</a>. \
-                  Hoặc truy cập
-                  <a href='%{link}book'> \
-                      <em>sách</em> \
-                  </a> khi cần hỗ trợ về ứng dụng."
+        <a href='%{link}help'>trang trợ giúp</a>. \
+        Hoặc truy cập
+        <a href='%{link}book'> \
+        <em>sách</em> \
+        </a> khi cần hỗ trợ về ứng dụng."
+  users:
+    new:
+      title: "Đăng ký"
+      submit_text: "Tạo tài khoản"
+      name_text: "Tên đăng nhập"
+      pwd_text: "Mật khẩu"
+      pwd_confirm_text: "Xác nhận"
+      email_text: "Email"
   layouts:
     header:
       home_text: "Trang chủ"
@@ -39,4 +52,4 @@ vi:
       contact_text: "Liên hệ"
       news_text: "Tin tức"
       info_html: "<a href='%{rails_link}'>Khóa học Ruby on Rails</a>
-                  dưới sự hướng dẫn của <a href='%{author_link}'>Michael Hartl</a>"
+        dưới sự hướng dẫn của <a href='%{author_link}'>Michael Hartl</a>"
