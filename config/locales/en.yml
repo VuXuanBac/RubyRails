@@ -84,6 +84,7 @@ en:
       new_user: "New User?"
       email: "Email"
       password: "Password"
+      rememberme_text: "Remember me on this computer"
   layouts:
     header:
       home_text: "Home"
