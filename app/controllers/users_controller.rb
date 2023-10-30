@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   before_action :admin_user, only: :destroy
 
   def index
-    @pagy, @users = pagy User.sort_list
+    @pagy, @users = pagy User.on_activated.sort_list
   end
 
   def show;end
@@ -20,9 +20,9 @@ class UsersController < ApplicationController
   def create
     @user = User.new user_params
     if @user.save
-      log_in @user
-      flash[:success] = t "text.user_welcome"
-      redirect_to @user
+      @user.send_activation_email
+      flash[:info] = t ".text.activation_notify"
+      redirect_to root_url
     else
       render :new, status: :bad_request
     end

@@ -1,5 +1,5 @@
 en:
-  app_name: "sample app"
+  app_name: "Sample App"
   base_title: "Ruby on Rails Tutorial Sample App"
   utils:
     errors_count: "This form contains %{count}"
@@ -45,6 +45,7 @@ en:
       update_success: "Update account successfully!"
       delete_success: "Delete account successfully!"
       delete_fail: "Fail to delete the account!"
+      activation_notify: "Please check your email to activate your account."
     new:
       title: "Sign up"
     edit:
@@ -71,6 +72,13 @@ en:
       email: "Email"
       password: "Password"
       rememberme_text: "Remember me on this computer"
+    create:
+      not_activate_notify: "Account not activated. Check your email for the activation link."
+  account_activations:
+    text:
+      activate_success: "Account activated!"
+      activate_fail: "Invalid activation link"
+      user_not_found: "Account does not exist"
   layouts:
     header:
       home_text: "Home"
@@ -87,3 +95,9 @@ en:
       news_text: "News"
       info_html: "The <a href='%{rails_link}'>Ruby on Rails Tutorial</a>
         by <a href='%{author_link}'>Michael Hartl</a>"
+  user_mailer:
+    greeting: "Hi"
+    account_activation:
+      subject: "Account Activation"
+      content: "Welcome to the Sample App! This email was used to register new account on this application. Please click on the link below to activate your account:"
+      link_text: "Activate this account for me"

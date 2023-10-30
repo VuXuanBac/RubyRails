@@ -9,6 +9,9 @@ gravatar_change_link: "https://gravatar.com/emails"
 gravatar_size: 80
 avatar_size: 50
 
+email_from_default: "noreply@example.com"
+development_host: "localhost:3000"
+
 languages:
   vi: "Tiếng Việt"
   en: "English"
