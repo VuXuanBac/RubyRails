@@ -50,6 +50,8 @@ gem "rails-i18n"
 # Config Manager
 gem "config"
 
+gem "byebug"
+gem "pry"
 # Use Sass to process CSS
 # gem "sassc-rails"
 

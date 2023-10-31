@@ -3,12 +3,16 @@ ruby_rails_link: "https://rubyonrails.org/"
 screencast_link: "https://screencasts.railstutorial.org/"
 news_link: "https://news.railstutorial.org/"
 author_link: "https://www.michaelhartl.com/"
+gravatar_link: "https://secure.gravatar.com/"
+gravatar_template: "https://secure.gravatar.com/avatar/%{id}?s=%{size}"
+avatar_size: 80
+
 languages:
   vi: "Tiếng Việt"
   en: "English"
 
-email_regex: !ruby/regexp /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
 validation:
+  email_regex: !ruby/regexp /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
   name_len_max: 50
   email_len_max: 255
   password_len_min: 6
