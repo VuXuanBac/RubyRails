@@ -36,6 +36,9 @@ en:
     errors_count: "This form contains %{pluralize(@user.errors.count, 'error')}"
   text:
     user_welcome: "Welcome to the Sample App!"
+    login_fail: "Invalid email/password combination"
+    login: "Log in"
+    signup: "Sign up"
   static_pages:
     home:
       title: ""
@@ -74,11 +77,23 @@ en:
       pwd_text: "Password"
       pwd_confirm_text: "Password Confirmation"
       email_text: "Email"
+  sessions:
+    new:
+      signup_text: "Sign up now!"
+      login_text: "Login"
+      new_user: "New User?"
+      email: "Email"
+      password: "Password"
   layouts:
     header:
       home_text: "Home"
       help_text: "Help"
       signin_text: "Sign in"
+      signout_text: "Sign out"
+      profile_text: "Profile"
+      settings_text: "Settings"
+      users_text: "Users"
+      account_text: "Account"
     footer:
       about_text: "About"
       contact_text: "Contact"

@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+
   def show
     @user = User.find_by id: params[:id]
     redirect_to root_path if @user.nil?
@@ -12,10 +13,11 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      flash[:success] = I18n.t "text.user_welcome"
+      log_in @user
+      flash[:success] = t "text.user_welcome"
       redirect_to @user
     else
-      render :new
+      redirect_to :new
     end
   end
 

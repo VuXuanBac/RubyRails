@@ -52,6 +52,9 @@ gem "config"
 
 gem "byebug"
 gem "pry"
+
+gem "jquery-rails"
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
