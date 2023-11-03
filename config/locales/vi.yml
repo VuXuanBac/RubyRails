@@ -52,6 +52,7 @@ vi:
       new_user: "Chưa có tài khoản?"
       email: "Email"
       password: "Mật khẩu"
+      rememberme_text: "Lưu phiên đăng nhập của tôi"
   layouts:
     header:
       home_text: "Trang chủ"
