@@ -7,6 +7,7 @@ class User < ApplicationRecord
                     format: { with: Settings.validation.email_regex },
                     uniqueness: true
   validates :password, presence: true, length: { minimum: Settings.validation.password_len_min }
+  scope :sort_list, -> {order(name: :asc, email: :asc)}
 
   has_secure_password
 
