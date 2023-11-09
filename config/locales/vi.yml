@@ -44,6 +44,7 @@ vi:
       update_success: "Cập nhật tài khoản thành công!"
       delete_success: "Xóa tài khoản thành công!"
       delete_fail: "Xóa tài khoản thất bại!"
+      activation_notify: "Kiểm tra hòm thư email của bạn để kích hoạt tài khoản."
     new:
       title: "Đăng ký"
     edit:
@@ -70,6 +71,13 @@ vi:
       email: "Email"
       password: "Mật khẩu"
       rememberme_text: "Lưu phiên đăng nhập của tôi"
+    create:
+      not_activate_notify: "Tài khoản của bạn chưa kích hoạt. Cách thức kích hoạt tài khoản đã được gửi về email bạn dùng để đăng ký"
+  account_activations:
+    text:
+      activate_success: "Kích hoạt tài khoản thành công!"
+      activate_fail: "Đường dẫn kích hoạt không hợp lệ!"
+      user_not_found: "Tài khoản không tồn tại"
   layouts:
     header:
       home_text: "Trang chủ"
@@ -86,3 +94,9 @@ vi:
       news_text: "Tin tức"
       info_html: "<a href='%{rails_link}'>Khóa học Ruby on Rails</a>
         dưới sự hướng dẫn của <a href='%{author_link}'>Michael Hartl</a>"
+  user_mailer:
+    greeting: "Xin chào"
+    account_activation:
+      subject: "Xác thực email cho tài khoản"
+      content: "Chào mừng đến với Ứng dụng của tôi! Email này đã dùng để đăng ký tài khoản trên ứng dụng. Hãy nhấn vào liên kết dưới đây để xác thực đó là bạn:"
+      link_text: "Kích hoạt tài khoản này cho tôi."
