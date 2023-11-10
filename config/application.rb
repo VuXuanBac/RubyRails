@@ -30,5 +30,6 @@ module RailsTutorial
     config.load_defaults 7.0
     config.active_storage.variant_processor = :mini_magick
     config.middleware.use I18n::JS::Middleware
+    config.action_view.embed_authenticity_token_in_remote_forms = true
   end
 end

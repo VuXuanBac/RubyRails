@@ -4,7 +4,8 @@ I18n.translations["vi"] = I18n.extend((I18n.translations["vi"] || {}), {
   "account_activations": {
     "text": {
       "activate_fail": "Đường dẫn kích hoạt không hợp lệ!",
-      "activate_success": "Kích hoạt tài khoản thành công!"
+      "activate_success": "Kích hoạt tài khoản thành công!",
+      "user_not_found": "Tài khoản không tồn tại"
     }
   },
   "activerecord": {
@@ -76948,6 +76949,10 @@ I18n.translations["vi"] = I18n.extend((I18n.translations["vi"] || {}), {
       "content_placeholder": "Nội dung bài đăng...",
       "submit_text": "Đăng"
     },
+    "stats": {
+      "follower": "người theo dõi",
+      "following": "đang theo dõi"
+    },
     "user_info": {
       "profile_link_text": "Thông tin"
     }
@@ -77026,6 +77031,9 @@ I18n.translations["vi"] = I18n.extend((I18n.translations["vi"] || {}), {
       "avatar_change_text": "Chọn ảnh",
       "title": "Cập nhật tài khoản"
     },
+    "follow": {
+      "submit": "Theo dõi"
+    },
     "form": {
       "submit_text": {
         "edit": "Cập nhật",
@@ -77041,11 +77049,18 @@ I18n.translations["vi"] = I18n.extend((I18n.translations["vi"] || {}), {
     "show": {
       "microposts_info": "Danh sách bài đăng (%{count})"
     },
+    "show_follow": {
+      "follower": "Danh sách người theo dõi tôi",
+      "following": "Danh sách người tôi theo dõi"
+    },
     "text": {
       "activation_notify": "Kiểm tra hòm thư email của bạn để kích hoạt tài khoản.",
       "delete_fail": "Xóa tài khoản thất bại!",
       "delete_success": "Xóa tài khoản thành công!",
       "update_success": "Cập nhật tài khoản thành công!"
+    },
+    "unfollow": {
+      "submit": "Bỏ theo dõi"
     },
     "user": {
       "delete_confirm_text": "Bạn có chắc muốn xóa tài khoản này?",

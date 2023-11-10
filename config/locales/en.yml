@@ -85,6 +85,13 @@ en:
     user:
       delete_text: "Delete"
       delete_confirm_text: "Are you sure to delete this account?"
+    follow:
+      submit: "Follow"
+    unfollow:
+      submit: "Unfollow"
+    show_follow:
+      following: "Followings"
+      follower: "Followers"
   microposts:
     text:
       create_success: "New micropost is created!"
@@ -162,3 +169,6 @@ en:
     micropost_form:
       content_placeholder: "Compose new micropost..."
       submit_text: "Post"
+    stats:
+      following: "following"
+      follower: "follower"
