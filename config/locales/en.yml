@@ -4,6 +4,8 @@ en:
   utils:
     errors_count: "This form contains %{count}"
     error: "error"
+  errors:
+    old_pwd: "can't be reuse"
   text:
     user_welcome: "Welcome to the Sample App!"
     login: "Log in"
@@ -72,6 +74,7 @@ en:
       email: "Email"
       password: "Password"
       rememberme_text: "Remember me on this computer"
+      forgot_pwd_text: "(forgot password)"
     create:
       not_activate_notify: "Account not activated. Check your email for the activation link."
   account_activations:
@@ -79,6 +82,22 @@ en:
       activate_success: "Account activated!"
       activate_fail: "Invalid activation link"
       user_not_found: "Account does not exist"
+  password_resets:
+    text:
+      invalid_email: "Email address not found"
+      mail_sent: "Email sent with password reset instructions"
+      token_expire: "Password reset has expired."
+      empty_pwd: "can't be empty"
+      reset_success: "Password has been reset."
+    new:
+      title: "Forgot password"
+      email_text: "Email"
+      submit_text: "Submit"
+    edit:
+      title: "Update password"
+      pwd_text: "Password"
+      pwd_confirm_text: "Confirmation"
+      submit_text: "Submit"
   layouts:
     header:
       home_text: "Home"
@@ -101,3 +120,10 @@ en:
       subject: "Account Activation"
       content: "Welcome to the Sample App! This email was used to register new account on this application. Please click on the link below to activate your account:"
       link_text: "Activate this account for me"
+    password_reset:
+      subject: "Reset Password"
+      content: "To reset your password click the link below:"
+      link_text: "Reset my password"
+      notify_expire: "This link will expire in two hours."
+      end_content: "If you did not request your password to be reset, please ignore this email and
+  your password will stay as it is."

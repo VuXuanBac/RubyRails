@@ -1,5 +1,6 @@
 class User < ApplicationRecord
-  attr_accessor :remember_token, :activation_token
+  attr_accessor :remember_token, :activation_token, :reset_token
+
   before_save :downcase_email
   before_create :create_activation_digest
 
@@ -8,6 +9,8 @@ class User < ApplicationRecord
                     format: { with: Settings.validation.email_regex },
                     uniqueness: true
   validates :password, presence: true, length: { minimum: Settings.validation.password_len_min }
+
+  validate :validate_not_old_password, on: :update
 
   scope :sort_list, -> {order(name: :asc, email: :asc)}
   scope :on_activated, -> {where(activated: true)}
@@ -38,7 +41,22 @@ class User < ApplicationRecord
   def authenticated? attribute, token
     digest = send "#{attribute}_digest"
     return false if digest.nil?
-    BCrypt::Password.new(digest).is_password? token
+    match_digest? digest, token
+  end
+
+  # Returns true if a password reset has expired.
+  def password_reset_expired?
+    reset_sent_at < Settings.validation.pwd_expires_long.hours.ago
+  end
+
+  # Sets the password reset attributes.
+  def create_reset_digest
+    self.reset_token = self.class.new_token
+    update_columns reset_digest: self.class.digest(reset_token), reset_sent_at: Time.zone.now
+  end
+
+  def send_password_reset_email
+    UserMailer.password_reset(self).deliver_now
   end
 
   class << self
@@ -68,5 +86,16 @@ class User < ApplicationRecord
     def create_activation_digest
       self.activation_token = self.class.new_token
       self.activation_digest = self.class.digest activation_token
+    end
+
+    def match_digest? digest, token
+      BCrypt::Password.new(digest).is_password? token
+    end
+
+    # Validate not reuse old password
+    def validate_not_old_password
+      if match_digest? password_digest_was, password
+        errors.add :password, I18n.t("errors.old_pwd")
+      end
     end
 end
