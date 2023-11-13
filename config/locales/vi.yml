@@ -84,6 +84,13 @@ vi:
     user:
       delete_text: "Xóa"
       delete_confirm_text: "Bạn có chắc muốn xóa tài khoản này?"
+    follow:
+      submit: "Theo dõi"
+    unfollow:
+      submit: "Bỏ theo dõi"
+    show_follow:
+      following: "Danh sách người tôi theo dõi"
+      follower: "Danh sách người theo dõi tôi"
   microposts:
     text:
       create_success: "Bài đăng đã được tạo thành công!"
@@ -159,3 +166,6 @@ vi:
     micropost_form:
       content_placeholder: "Nội dung bài đăng..."
       submit_text: "Đăng"
+    stats:
+      following: "đang theo dõi"
+      follower: "người theo dõi"

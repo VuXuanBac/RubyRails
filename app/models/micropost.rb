@@ -6,7 +6,7 @@ class Micropost < ApplicationRecord
   end
 
   scope :newest, -> { order created_at: :desc }
-  scope :for_user, ->(id) { where user_id: id }
+  scope :for_users, ->(id) { where user_id: id }
 
   validates :user_id, presence: true
   validates :content, presence: true, length: { maximum: Settings.validation.content_len_max }

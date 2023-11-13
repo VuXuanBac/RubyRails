@@ -4,7 +4,8 @@ I18n.translations["en"] = I18n.extend((I18n.translations["en"] || {}), {
   "account_activations": {
     "text": {
       "activate_fail": "Invalid activation link",
-      "activate_success": "Account activated!"
+      "activate_success": "Account activated!",
+      "user_not_found": "Account does not exist"
     }
   },
   "activerecord": {
@@ -77235,6 +77236,10 @@ I18n.translations["en"] = I18n.extend((I18n.translations["en"] || {}), {
       "content_placeholder": "Compose new micropost...",
       "submit_text": "Post"
     },
+    "stats": {
+      "follower": "follower",
+      "following": "following"
+    },
     "user_info": {
       "profile_link_text": "View profile"
     }
@@ -77313,6 +77318,9 @@ I18n.translations["en"] = I18n.extend((I18n.translations["en"] || {}), {
       "avatar_change_text": "Change avatar",
       "title": "Update profile"
     },
+    "follow": {
+      "submit": "Follow"
+    },
     "form": {
       "submit_text": {
         "edit": "Update my account",
@@ -77328,11 +77336,18 @@ I18n.translations["en"] = I18n.extend((I18n.translations["en"] || {}), {
     "show": {
       "microposts_info": "Microposts (%{count})"
     },
+    "show_follow": {
+      "follower": "Followers",
+      "following": "Followings"
+    },
     "text": {
       "activation_notify": "Please check your email to activate your account.",
       "delete_fail": "Fail to delete the account!",
       "delete_success": "Delete account successfully!",
       "update_success": "Update account successfully!"
+    },
+    "unfollow": {
+      "submit": "Unfollow"
     },
     "user": {
       "delete_confirm_text": "Are you sure to delete this account?",
