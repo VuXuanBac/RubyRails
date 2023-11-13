@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  has_many :microposts, dependent: :destroy
+
   attr_accessor :remember_token, :activation_token, :reset_token
 
   before_save :downcase_email
@@ -9,11 +11,10 @@ class User < ApplicationRecord
                     format: { with: Settings.validation.email_regex },
                     uniqueness: true
   validates :password, presence: true, length: { minimum: Settings.validation.password_len_min }
-
   validate :validate_not_old_password, on: :update
 
-  scope :sort_list, -> {order(name: :asc, email: :asc)}
-  scope :on_activated, -> {where(activated: true)}
+  scope :sort_list, -> { order(name: :asc, email: :asc) }
+  scope :on_activated, -> { where(activated: true) }
 
   has_secure_password
 
@@ -59,6 +60,12 @@ class User < ApplicationRecord
     UserMailer.password_reset(self).deliver_now
   end
 
+  # Defines a proto-feed.
+  # See "Following users" for the full implementation.
+  def feed
+    Micropost.for_user id
+  end
+
   class << self
     # Returns the hash digest of the given string.
     def digest string
@@ -77,25 +84,26 @@ class User < ApplicationRecord
   end
 
   private
-    # Converts email to all lower-case.
-    def downcase_email
-      self.email.downcase!
-    end
 
-    # Creates and assigns the activation token and digest.
-    def create_activation_digest
-      self.activation_token = self.class.new_token
-      self.activation_digest = self.class.digest activation_token
-    end
+  # Converts email to all lower-case.
+  def downcase_email
+    self.email.downcase!
+  end
 
-    def match_digest? digest, token
-      BCrypt::Password.new(digest).is_password? token
-    end
+  # Creates and assigns the activation token and digest.
+  def create_activation_digest
+    self.activation_token = self.class.new_token
+    self.activation_digest = self.class.digest activation_token
+  end
 
-    # Validate not reuse old password
-    def validate_not_old_password
-      if match_digest? password_digest_was, password
-        errors.add :password, I18n.t("errors.old_pwd")
-      end
+  def match_digest? digest, token
+    BCrypt::Password.new(digest).is_password? token
+  end
+
+  # Validate not reuse old password
+  def validate_not_old_password
+    if match_digest? password_digest_was, password
+      errors.add :password, I18n.t("errors.old_pwd")
     end
+  end
 end

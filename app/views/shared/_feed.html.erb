@@ -1,0 +1,7 @@
+<% if @feed_items.any? %>
+  <%== pagy_bootstrap_nav @pagy %>
+  <ol class="microposts">
+    <%= render @feed_items %>
+  </ol>
+  <%== pagy_bootstrap_nav @pagy %>
+<% end %>

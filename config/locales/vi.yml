@@ -1,23 +1,38 @@
 vi:
   app_name: "Ứng dụng của tôi"
   base_title: "Thực hành Ruby on Rails"
-  utils:
-    errors_count: "Có %{count}"
-    error: "lỗi"
   errors:
     old_pwd: "không được trùng với mật khẩu cũ"
+    invalid_type: "phải đúng định dạng"
+    larger_size: "phải có kích thước nhỏ hơn %{size}MB"
+    huge_image: "Kích thước hình ảnh quá lớn (tối đa 5MB)"
   text:
     user_welcome: "Chào mừng bạn đến với ứng dụng!"
     login: "Đăng nhập"
     signup: "Đăng ký"
     require_login: "Bạn chưa đăng nhập!"
     login_fail: "Email hoặc mật khẩu không đúng"
+    micropost: "bài đăng"
+    error: "lỗi"
+    image: "hình ảnh"
+    email: "Email"
+    password: "Mật khẩu"
+  activerecord:
+    models:
+      user: "Người dùng"
+      micropost: "Bài đăng"
+    attributes:
+      user:
+        name: "Tên đăng nhập"
+        email: "Email"
+        password: "Mật khẩu"
+        password_confirmation: "Xác nhận mật khẩu"
+      micropost:
+        content: "Nội dung"
+        image: "Ảnh"
   static_pages:
     home:
       title: ""
-      welcome: "Chào mừng bạn đến với ứng dụng"
-      intro_html: "Đây là trang chủ cho ứng dụng trong khóa học <a href='%{link}'>Ruby on Rails</a>"
-      signup_text: "Đăng ký ngay"
     about:
       title: "Về chúng tôi"
       info_html: "Khóa học <a href='%{rails_link}'><em>Ruby on Rails \
@@ -41,6 +56,12 @@ vi:
         <a href='%{link}book'> \
         <em>sách</em> \
         </a> khi cần hỗ trợ về ứng dụng."
+    user_home:
+      feed_title: "Bài đăng mới"
+    guest_home:
+      welcome: "Chào mừng bạn đến với ứng dụng"
+      intro_html: "Đây là trang chủ cho ứng dụng trong khóa học <a href='%{link}'>Ruby on Rails</a>"
+      signup_text: "Đăng ký ngay"
   users:
     text:
       update_success: "Cập nhật tài khoản thành công!"
@@ -54,24 +75,29 @@ vi:
       avatar_change_text: "Chọn ảnh"
     index:
       title: "Danh sách người dùng"
+    show:
+      microposts_info: "Danh sách bài đăng (%{count})"
     form:
-      name_text: "Tên đăng nhập"
-      pwd_text: "Mật khẩu"
-      pwd_confirm_text: "Xác nhận"
-      email_text: "Email"
       submit_text:
         new: "Tạo tài khoản"
         edit: "Cập nhật"
     user:
       delete_text: "Xóa"
       delete_confirm_text: "Bạn có chắc muốn xóa tài khoản này?"
+  microposts:
+    text:
+      create_success: "Bài đăng đã được tạo thành công!"
+      delete_success: "Xóa bài đăng thành công!"
+      delete_fail: "Xóa bài đăng thất bại!"
+    micropost:
+      created_time: "%{time_ago} trước."
+      delete_text: "Xóa"
+      delete_confirm_text: "Bạn có chắc muốn xóa bài đăng này?"
   sessions:
     new:
       signup_text: "Đăng ký ngay"
       login_text: "Đăng nhập"
       new_user: "Chưa có tài khoản?"
-      email: "Email"
-      password: "Mật khẩu"
       rememberme_text: "Lưu phiên đăng nhập của tôi"
       forgot_pwd_text: "(Quên mật khẩu)"
     create:
@@ -125,3 +151,11 @@ vi:
       link_text: "Thiết lập lại mật khẩu"
       notify_expire: "Liên kết chỉ có hiệu lực trong 2 tiếng."
       end_content: "Nếu bạn không phải là người gửi yêu cầu này, hãy bỏ qua email, mật khẩu của bạn sẽ không thay đổi."
+  shared:
+    error_messages:
+      errors_count: "Có %{count}"
+    user_info:
+      profile_link_text: "Thông tin"
+    micropost_form:
+      content_placeholder: "Nội dung bài đăng..."
+      submit_text: "Đăng"

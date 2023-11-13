@@ -1,5 +1,5 @@
 source "https://rubygems.org"
-git_source(:github){|repo| "https://github.com/#{repo}.git"}
+git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.2.2"
 
@@ -46,6 +46,7 @@ gem "bootsnap", require: false
 
 # Internationalization
 gem "rails-i18n"
+gem "i18n-js", "~>3.9.2"
 
 # Config Manager
 gem "config"
@@ -56,6 +57,10 @@ gem "pry"
 gem "jquery-rails"
 
 gem "pagy"
+
+gem "image_processing", "1.12.2"
+gem "active_storage_validations"
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 

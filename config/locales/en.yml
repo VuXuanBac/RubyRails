@@ -1,23 +1,38 @@
 en:
   app_name: "Sample App"
   base_title: "Ruby on Rails Tutorial Sample App"
-  utils:
-    errors_count: "This form contains %{count}"
-    error: "error"
   errors:
     old_pwd: "can't be reuse"
+    invalid_type: "must be in a valid format"
+    larger_size: "should be less than %{size}MB"
+    huge_image: "Maximum file size is 5MB. Please choose a smaller file."
   text:
     user_welcome: "Welcome to the Sample App!"
     login: "Log in"
     signup: "Sign up"
     require_login: "Please log in"
     login_fail: "Invalid email/password combination"
+    micropost: "micropost"
+    error: "error"
+    image: "image"
+    email: "Email"
+    password: "Password"
+  activerecord:
+    models:
+      user: "User"
+      micropost: "Micropost"
+    attributes:
+      user:
+        name: "Name"
+        email: "Email"
+        password: "Password"
+        password_confirmation: "Password Confirmation"
+      micropost:
+        content: "Content"
+        image: "Image"
   static_pages:
     home:
       title: ""
-      welcome: "Welcome to the Sample App"
-      intro_html: "This is the home page for the sample application in <a href='%{link}'>Ruby on Rails Tutorial</a>"
-      signup_text: "Sign up now!"
     about:
       title: "About"
       info_html: "The <a href='%{rails_link}'><em>Ruby on Rails \
@@ -42,6 +57,12 @@ en:
         <a href='%{link}book'> \
         <em>Ruby on Rails Tutorial</em> \
         </a>."
+    user_home:
+      feed_title: "Micropost Feed"
+    guest_home:
+      welcome: "Welcome to the Sample App"
+      intro_html: "This is the home page for the sample application in <a href='%{link}'>Ruby on Rails Tutorial</a>"
+      signup_text: "Sign up now!"
   users:
     text:
       update_success: "Update account successfully!"
@@ -55,24 +76,29 @@ en:
       avatar_change_text: "Change avatar"
     index:
       title: "People"
+    show:
+      microposts_info: "Microposts (%{count})"
     form:
-      name_text: "Username"
-      pwd_text: "Password"
-      pwd_confirm_text: "Password Confirmation"
-      email_text: "Email"
       submit_text:
         new: "Create my account"
         edit: "Update my account"
     user:
       delete_text: "Delete"
       delete_confirm_text: "Are you sure to delete this account?"
+  microposts:
+    text:
+      create_success: "New micropost is created!"
+      delete_success: "Delete micropost successfully!"
+      delete_fail: "Fail to delete the micropost!"
+    micropost:
+      created_time: "%{time_ago} ago."
+      delete_text: "Delete"
+      delete_confirm_text: "Are you sure to delete this micropost?"
   sessions:
     new:
       signup_text: "Sign up now!"
       login_text: "Login"
       new_user: "New User?"
-      email: "Email"
-      password: "Password"
       rememberme_text: "Remember me on this computer"
       forgot_pwd_text: "(forgot password)"
     create:
@@ -125,5 +151,14 @@ en:
       content: "To reset your password click the link below:"
       link_text: "Reset my password"
       notify_expire: "This link will expire in two hours."
-      end_content: "If you did not request your password to be reset, please ignore this email and
-  your password will stay as it is."
+      end_content:
+        "If you did not request your password to be reset, please ignore this email and
+        your password will stay as it is."
+  shared:
+    error_messages:
+      errors_count: "This form contains %{count}"
+    user_info:
+      profile_link_text: "View profile"
+    micropost_form:
+      content_placeholder: "Compose new micropost..."
+      submit_text: "Post"

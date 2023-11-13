@@ -1,9 +1,9 @@
 class SessionsController < ApplicationController
-  def new;end
+  def new; end
 
   def create
     user = User.find_by email: params[:session][:email].downcase
-    if user&.authenticate params[:session][:password]
+    if user&.authenticate params.dig(:session, :password)
       if user.activated?
         # Log the user in and redirect to the user's show page.
         log_in user

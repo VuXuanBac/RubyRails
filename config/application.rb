@@ -24,7 +24,11 @@ module RailsTutorial
 
     # Set supported locales
     config.i18n.available_locales = [:en, :vi]
+
     # Set default locale
     config.i18n.default_locale = :en
+    config.load_defaults 7.0
+    config.active_storage.variant_processor = :mini_magick
+    config.middleware.use I18n::JS::Middleware
   end
 end
